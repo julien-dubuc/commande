@@ -1,27 +1,27 @@
 # Modélisation et Commande d'un Pendule Rigide
 
-Ce dépôt illustre les étapes de modélisation et de contrôle d'un système de pendule rigide monté sur un arbre motorisé horizontal[cite: 20, 28]. Les travaux s'appuient sur **MATLAB et Simulink** pour concevoir et tester différentes lois de commande[cite: 20].
+Ce dépôt illustre les étapes de modélisation et de contrôle d'un système de pendule rigide monté sur un arbre motorisé horizontal. Les travaux s'appuient sur **MATLAB et Simulink** pour concevoir et tester différentes lois de commande.
 
-L'étude est structurée autour de trois approches progressives[cite: 26] :
-- **MIL (Model In the Loop)** : Mise en équation fondamentale de la dynamique de la partie opérative[cite: 28].
-- **SIL (Software In the Loop)** : Simulation logicielle pour l'élaboration de la commande (correcteur PID de vitesse, commande linéarisante par bouclage)[cite: 28, 32].
-- **HIL (Hardware In the Loop)** : Identification des paramètres réels sur la maquette (frottements, inertie, balourd) et comparaison de correcteurs sur le matériel (PID de position et retour tachymétrique)[cite: 28].
+L'étude est structurée autour de trois approches progressives :
+- **MIL (Model In the Loop)** : Mise en équation fondamentale de la dynamique de la partie opérative.
+- **SIL (Software In the Loop)** : Simulation logicielle pour l'élaboration de la commande (correcteur PID de vitesse, commande linéarisante par bouclage).
+- **HIL (Hardware In the Loop)** : Identification des paramètres réels sur la maquette (frottements, inertie, balourd) et comparaison de correcteurs sur le matériel (PID de position et retour tachymétrique).
 
 ## 📁 Contenu du dépôt
 
-Le dépôt est organisé avec les fichiers suivants[cite: 16] :
+Le dépôt est organisé avec les fichiers suivants :
 
 ### 📄 Documentation
-- `TP_Pendule_Rigide.pdf` : Rapport complet de l'étude détaillant la modélisation mathématique, les schémas Simulink, l'identification des paramètres matériels et l'analyse des résultats expérimentaux[cite: 26, 27].
+- `TP_Pendule_Rigide.pdf` : Rapport complet de l'étude détaillant la modélisation mathématique, les schémas Simulink, l'identification des paramètres matériels et l'analyse des résultats expérimentaux.
 
 ### 💻 Simulation Logicielle (SIL)
-- `SIL.m` : Script d'initialisation chargeant les paramètres théoriques du moteur (résistance, inductance, constantes de couple) et du pendule[cite: 21, 42].
-- `SIL1.slx`, `SIL2.slx`, `SIL3.slx` : Modèles Simulink utilisés pour analyser le moteur à vide, régler l'asservissement en vitesse et tester la commande linéarisante face à la gravité[cite: 16, 31, 33].
+- `SIL.m` : Script d'initialisation chargeant les paramètres théoriques du moteur (résistance, inductance, constantes de couple) et du pendule.
+- `SIL1.slx`, `SIL2.slx`, `SIL3.slx` : Modèles Simulink utilisés pour analyser le moteur à vide, régler l'asservissement en vitesse et tester la commande linéarisante face à la gravité.
 
 ### ⚙️ Tests sur Matériel (HIL)
-- `HIL.m` : Script d'initialisation contenant les paramètres physiques affinés et identifiés expérimentalement sur le banc d'essai (frottements visqueux réels, inertie équivalente, compensation de la *dead zone*)[cite: 19, 43].
-- `HIL_simu.slx` : Modèle Simulink de simulation simulant le comportement réel pour pré-régler les correcteurs[cite: 16, 36].
-- `HIL_reel.slx` : Modèle Simulink déployé sur le système physique pour piloter l'actionneur en temps réel[cite: 16, 37].
+- `HIL.m` : Script d'initialisation contenant les paramètres physiques affinés et identifiés expérimentalement sur le banc d'essai (frottements visqueux réels, inertie équivalente, compensation de la *dead zone*).
+- `HIL_simu.slx` : Modèle Simulink de simulation simulant le comportement réel pour pré-régler les correcteurs.
+- `HIL_reel.slx` : Modèle Simulink déployé sur le système physique pour piloter l'actionneur en temps réel.
 
 ## 🚀 Comment utiliser ce dépôt ?
 
@@ -34,5 +34,5 @@ Le dépôt est organisé avec les fichiers suivants[cite: 16] :
    - Ouvrez et simulez `HIL_simu.slx` ou connectez-vous à la carte avec `HIL_reel.slx`.
 
 ## 👥 Auteurs
-- **Timm CLAVERIE** & **Julien DUBUC**[cite: 25]
-- *SeaTech - École d'Ingénieurs, Parcours SYSMER (2026-2027)*[cite: 25]
+- **Timm CLAVERIE** & **Julien DUBUC**
+- *SeaTech - École d'Ingénieurs, Parcours SYSMER (2026-2027)*
