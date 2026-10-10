@@ -1,5 +1,7 @@
 # Modélisation et Commande d'un Pendule Rigide
 
+<video src="https://github.com/user-attachments/assets/45f72f6a-73c7-434a-8ce3-1e443fbc31e4" width="600" controls="controls"></video>
+
 Ce dépôt illustre les étapes de modélisation et de contrôle d'un système de pendule rigide monté sur un arbre motorisé horizontal. Les travaux s'appuient sur **MATLAB et Simulink** pour concevoir et tester différentes lois de commande.
 
 L'étude est structurée autour de trois approches progressives :
